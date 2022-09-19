@@ -79,7 +79,7 @@ public class EnemyAI : MonoBehaviour
 
    private void ChaseObjects()
    {
-      if (chase)
+      if (chase && chaseTransform != null)
       {
          transform.LookAt(chaseTransform);
          transform.position = Vector3.Lerp(transform.position, chaseTransform.position, Time.deltaTime * movementSpeed);
